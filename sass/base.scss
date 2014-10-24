@@ -1,1 +1,96 @@
+/**
+ * @file base.scss
+ *   Defaults. They are almost exclusively single element selectors but it
+ *   could include attribute selectors, pseudo-class selectors, helper classes,
+ *   child selectors or sibling selectors. Essentially, a base style says that
+ *   wherever this element is on the page, it should look like this.
+ */
+
 @import "vars";
+@import "mixins";
+
+//base styles
+* {
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	list-style:none;
+	@include text-shadow(none);
+}
+
+html {
+  font-size: $font-base;
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #3d3d3d; // Old browsers
+  @include filter-gradient(#3d3d3d, #212121, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #3d3d3d 0%,#212121 100%));
+}
+
+body {
+  font-size: 1.6em;
+  font-weight: 300;
+	font-family:$sans-serif;
+  background:url(../images/brushed.jpg) repeat;
+  color:$near-white;
+}
+
+header {
+  // needs latest Compass, add '@import "compass"' to your scss
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+ &::after {
+  content:"";
+  position:absolute;
+  height:3px;
+  width:100%;
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: $color-1; // Old browsers
+  @include filter-gradient($color-2, $color-1, horizontal); // IE6-9
+  @include background-image(linear-gradient(left,  $color-1 1%,$color-2 50%,$color-1 100%));
+ }
+}
+
+.outer-wrapper {
+  background:rgba(0,0,0,.5);
+}
+
+h1 {
+  font-size: 3.2em;
+  color:$near-white;
+  font-weight:100;
+}
+h2 {
+  font-size: 2.8em;
+  color:$near-white;
+  font-weight:100;
+}
+h3 {
+  font-size:3em;
+  color:#fff;
+}
+h4 {
+  font-size: 2.4em;
+  color:#fff;
+}
+h5 {
+  font-size: 2em;
+  color:#fff;
+}
+h6 {
+  font-size: 1.8em;
+  color:#fff;
+}
+
+a {
+  color: $color-2;
+  text-decoration: none;
+  &:hover {
+    color: darken($color-2, 20%);
+    text-decoration: none;
+  }
+}

@@ -1,1 +1,196 @@
+/**
+ * @file component.scss
+ *   The reusable, modular parts of the design. They are the callouts, the
+ *   sidebar sections, the product lists and so on.
+ */
+
 @import "vars";
+@import "mixins";
+
+.logo {
+  font-size:.8rem;
+  width:204px;
+  height:92px;
+  background:url(../images/ibs-logo.png) no-repeat;
+  text-indent:-10000px;
+  margin-right:$spacing * 2;
+  margin-top:.5 * $spacing;
+}
+
+.search-modal {
+  top:300px;
+  input {
+    border:none;
+    background:#fff;
+    width:100%;
+    padding-right:30px;
+    color:$grey-light;
+    line-height:3.5rem;
+    height:3.5rem;
+    font-size:3rem;
+    &:focus {
+      color:$near-black;
+    }
+  }
+}
+
+.search {
+  @include border-radius(35px);
+  height:35px;
+  line-height:29px;
+  width:35px;
+  border:1px solid rgba(36, 36, 36, 1);
+  text-align:center;
+  background:#000;
+  display:inline-block;
+  .glyphicon {
+    color:#fff;
+    font-size:1.6rem;
+  }
+}
+
+.btn-login {
+  &, &:hover, &:active {
+    display:inline-block;
+    position:relative;
+    margin-right:40px;
+    text-transform: uppercase;
+    background:#000;
+    border:1px solid rgba(36, 36, 36, 1);
+    @include border-radius(0 0 0 0);
+    @include box-shadow(none);
+    @include text-shadow(none);
+    font-size:1.2rem;
+    color:#fff;
+    height:35px;
+    &::after {
+      width:1px;
+      position:absolute;
+      @include absolute-y(25px);
+      right:-23px;
+      background:$color-2;
+      height:25px;
+      content:"";
+    }
+  }
+}
+
+
+.carousel {
+  .carousel-control {
+    @include border-radius($control-size);
+    line-height:$control-size;
+    width:$control-size;
+    background:#000;
+    bottom:$spacing;
+    top:auto;
+    text-align: center;
+    @include text-shadow(0 0 0 none);
+    .glyphicon {
+      font-size:1.6rem;
+      margin:0;
+      width:auto;
+      height:auto;
+      position:relative;
+      display:inline;
+      left:auto;
+      right:auto;
+      top:3px;
+    }
+    &.left {
+      left:$spacing;
+    }
+    &.right {
+      left:$control-size + $spacing + $spacing;
+    }
+  }
+  .carousel-caption {
+    width:50%;
+    right:$spacing;
+    bottom:$spacing;
+    background:rgba(0,0,0,.7);
+    left:auto;
+    top:auto;
+    font-family:$sans-serif;
+    padding:$spacing;
+  }
+  .carousel-indicators {
+    display:none;
+  }
+  .item {
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
+}
+
+.top-button {
+  padding-top:$spacing;
+  padding-bottom:$spacing;
+  @include transition(.3s all);
+  background:rgba(0,0,0,0);
+  text-transform: uppercase;
+  font-weight:400;
+  letter-spacing:.05rem;
+  text-align:center;
+  padding:$spacing ($spacing * 2);
+  float:left;
+  height:$header-height;
+  a {
+    color:#fff;
+  }
+  img {
+    width:50px;
+    margin:auto;
+    margin-top:.5 * $spacing;
+  }
+  &:hover {
+    background:rgba(0,0,0,.7);
+    @include border-radius($radius $radius 0 0);
+    border-bottom:5px solid $color-1;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.sidebar, .main-content {
+  @include padding-top-bottom();
+}
+
+//
+// bootstrap panels
+//
+.panel, .panel-body {
+  @include box-shadow(none);
+  @include border-radius(0);
+  border:none;
+  background:transparent;
+  
+}
+.panel {
+  .panel-heading {
+    background:rgba(0,0,0,.2);
+    color:$near-white;
+    @include border-radius(none);
+    border-color:rgba(255,255,255,.8);
+  }
+}
+
+.panel-gallery {
+  .panel-body {
+    padding:0;
+  }
+  .gallery {
+    width:100%;
+    overflow:hidden;
+    
+    > img {
+      display:none; // display none so the images aren't shown before
+                    // the whole page is loaded.  Overridden when galleria adds
+                    // an inner wrapper.
+    }
+  }
+}
+

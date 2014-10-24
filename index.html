@@ -12,48 +12,62 @@
         
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/vendor/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/vendor/galleria.ibs.css">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/component.css">
-        <link rel="stylesheet" href="css/theme.css">
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!--
+        hotfix.css is CSS only (not built with a compiler) for back-end devs 
+        to make quick hotfixes to existing styles (or to add new ones)
+        -->
+        <link rel="stylesheet" href="css/hotfix.css">
     </head>
     <body>
         <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
         <div class="outer-wrapper container-fluid">
-          <div class="inner-wrapper container">
-            <header class="page-top row">
-              <div class="logo col-md-2">
-                <h1>Integrated Business Solutions</h1>
-              </div>
-              <div class="col-xs-2">
-                <a href="#">Why Napa IBS?
-                  <img class="img-responsive" src="images/buttons/IBS_icons_IBS.png" />
-                </a>
-              </div>
-              <div class="col-xs-2">
-                <a href="#">Customer Fleet
-                  <img class="img-responsive" src="images/buttons/IBS_icons_IBS.png" />
-                </a>
-              </div>
-              <div class="col-xs-2">
-                <a href="#">NJPA
-                  <img class="img-responsive" src="images/buttons/IBS_icons_NJPA.png" />
-                </a>
-              </div>
-              <div class="col-md-3 pull-right text-right">
-                <div class="btn btn-primary">IBS Member Login</div>
-                <div class="search">
-                  <div class="glyphicon glyphicon-search"></div>
+          <div class="search-modal modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <form>
+                    <input type="text" value="Search" onFocus="this.value = ''" onBlur="this.value='Search'" />
+                    <input type="submit" class="submit hidden" />
+                  </form>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <header class="row">
+            <div class="container header">
+                <div class="logo col-md-2">
+                  <h1>Integrated Business Solutions</h1>
+                </div>
+                <div class="top-button">
+                  <a href="#">Why Napa IBS?
+                    <img class="img-responsive" src="images/buttons/IBS_icons_IBS.png" />
+                  </a>
+                </div>
+                <div class="top-button">
+                  <a href="#">Customer Fleet
+                    <img class="img-responsive" src="images/buttons/IBS_icons_IBS.png" />
+                  </a>
+                </div>
+                <div class="top-button">
+                  <a href="#">NJPA
+                    <img class="img-responsive" src="images/buttons/IBS_icons_NJPA.png" />
+                  </a>
+                </div>
+                <div class="col-md-3 header-right">
+                  <div class="btn btn-login">IBS Member Login</div>
+                  <a href="javascript:;" class="search"  data-toggle="modal" data-target=".search-modal">
+                      <div class="glyphicon glyphicon-search"></div>
+                  </a>
                 </div>
               </div>
-            </header>	
+          </header>
+          <div class="inner-wrapper container">
             <div class="row">
               <div class="col-md-8 main-content">
                 <div id="main-carousel" class="carousel slide" data-ride="carousel">
@@ -66,25 +80,25 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                     <div class="item active">
-                      <img src="..." alt="...">
+                      <img src="http://www.placepuppy.it/700/400" alt="This is a caption">
                       <div class="carousel-caption">
-                        ...
+                        This is a caption.  The caption goes here
                       </div>
                     </div>
                     <div class="item">
-                      <img src="..." alt="...">
+                      <img src="http://www.placepuppy.it/700/400" alt="This is a caption">
                       <div class="carousel-caption">
-                        ...
+                        This is a caption.  The caption goes here
                       </div>
                     </div>
                   </div>
                 
                   <!-- Controls -->
                   <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
-                    <img src="images/go_left.png"/>
+                    <span class="glyphicon glyphicon-chevron-left"></span>
                   </a>
                   <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
-                    <img src="images/go_right.png"/>
+                    <span class="glyphicon glyphicon-chevron-right"></span>
                   </a>
                 </div>
                 
@@ -94,35 +108,48 @@
                     </p>
                 
               </div><!-- /col-md-8 -->
-              <aside class="col-md-4">
-                <h2>Customer Testimonials</h2>
-                <div class="gallery">
-                
-                </div>
-                <h2><a href="#">NAPA IBS In the News</a></h2>
-                <div class="row">
-                  <div class="news col-md-12">
-                    <article>
-                      <a href="#" class="news-title">Title of News Article</a> - <span class="news-date">10/10/14</span>
-                      <p>
-                      Some lines from the article..<a href="#">More</a>
-                      </p>
-                    </article>
-                    <article>
-                      <a href="#" class="news-title">Title of News Article</a> - <span class="news-date">10/10/14</span>
-                      <p>
-                      Some lines from the article..<a href="#">More</a>
-                      </p>
-                    </article>
-                    <article>
-                      <a href="#" class="news-title">Title of News Article</a> - <span class="news-date">10/10/14</span>
-                      <p>
-                      Some lines from the article..<a href="#">More</a>
-                      </p>
-                    </article>
+              <aside class="col-md-4 sidebar">
+                <div class="panel panel-default panel-gallery">
+                  <div class="panel-heading">
+                    Customer Testimonials
                   </div>
-                </div>
-              </aside><!-- /col-md-4 -->
+                  <div class="panel-body">
+                    <div class="gallery galleria-theme-ibs">
+                      <img src="http://www.placepuppy.it/400/300" alt="This is a caption">
+                      <img src="http://www.placepuppy.it/400/300" alt="This is a caption">
+                      <img src="http://www.placepuppy.it/400/300" alt="This is a caption">
+                    </div>
+                  </div>
+                </div><!-- /.panel -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <a href="#">NAPA IBS In the News</a>
+                  </div>
+                  <div class="panel-body">
+                    <div class="news col-md-12">
+                      <article>
+                        <a href="#" class="news-title">Title of News Article</a> - <span class="news-date">10/10/14</span>
+                        <p>
+                        Some lines from the article..<a href="#">More</a>
+                        </p>
+                      </article>
+                      <article>
+                        <a href="#" class="news-title">Title of News Article</a> - <span class="news-date">10/10/14</span>
+                        <p>
+                        Some lines from the article..<a href="#">More</a>
+                        </p>
+                      </article>
+                      <article>
+                        <a href="#" class="news-title">Title of News Article</a> - <span class="news-date">10/10/14</span>
+                        <p>
+                        Some lines from the article..<a href="#">More</a>
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </div><!-- /.panel -->
+                <div class="clearfix"></div>
+              </aside><!-- /.col-md-4.sidebar -->
             </div>
           </div>
           <footer class="container">
@@ -131,6 +158,10 @@
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/galleria.js"></script>
+        <script src="js/vendor/galleria.ibs.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

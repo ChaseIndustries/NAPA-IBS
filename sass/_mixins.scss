@@ -1,0 +1,60 @@
+//
+//  SASS MIXINS (Helpers)
+//
+ 
+//padding helpers
+@mixin padding-top-bottom(){
+  padding-top:$spacing;
+  padding-bottom:$spacing;
+}
+
+//margin helpers
+@mixin margin-top-bottom(){
+  margin-top:$spacing;
+  margin-bottom:$spacing;
+}
+
+//positioning helpers
+@mixin absolute-center($w : false, $h : false){
+  position:absolute;
+  left:50%;
+  top:50%;
+  @if $w {
+    margin-left:-.5 * $w;
+  } @else {
+    @include translateX(-50%);
+  }
+  @if $h {
+    margin-top:-.5 * $h;
+  } @else {
+    @include translateY(-50%);
+  }
+
+}
+@mixin absolute-x($w : false){
+  position:absolute;
+  left:50%;
+  @if $w {
+    margin-left:-.5 * $w;
+  } @else {
+    @include translateX(-50%);
+  }
+}
+@mixin absolute-y($h : false){
+  position:absolute;
+  top:50%;
+  @if $h {
+    margin-top:-.5 * $h;
+  } @else {
+    @include translateY(-50%);
+  }
+}
+@mixin center() {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+//borders & corners
+@mixin rounded(){
+  @include border-radius($radius);
+}

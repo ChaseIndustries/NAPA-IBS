@@ -1,10 +1,30 @@
 @import "compass";
 @import "compass/css3";
+@import "compass/layout";
 
-//sass variables
+// Font size
+$font-base: percentage(10 / 16);  // 1rem = 10px
 
-//colors
+// Font stacks
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
+$serif: "Times",serif;
+$sans-serif: "Roboto","Helvetica",sans-serif;
 
-//fonts
+// Colors
+$color-1:#2D6CA2;
+$color-2:#FFC423;
+$near-black:#191919;
+$near-white:#f0f0f0;
+$grey-light:#ccc;
+$grey-medium:grey;
 
-//arbitrary values
+//Bootstrap Breakpoints
+$break-xs: 768px;
+$break-sm: 992px;
+$break-md: 1200px;
+
+// Other Arbitrary Values
+$spacing: 15px;
+$radius: 5px;
+$control-size:50px;
+$header-height:120px;

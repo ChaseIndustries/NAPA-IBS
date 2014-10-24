@@ -1,0 +1,12 @@
+/** @file layout.scss Divides the page into sections. Layouts hold one or more modules together. */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
+/* line 9, ../sass/layout.scss */
+header { position: relative; margin-bottom: 3px; }
+
+/* line 13, ../sass/layout.scss */
+.header { position: relative; }
+/* line 15, ../sass/layout.scss */
+.header .header-right { height: 50px; position: absolute; top: 50%; margin-top: -25px; right: 15px; left: auto; text-align: right; }
+
+/* line 24, ../sass/layout.scss */
+.sidebar { padding-top: 15px; padding-bottom: 15px; }

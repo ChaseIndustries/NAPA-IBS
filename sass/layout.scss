@@ -1,1 +1,26 @@
+/**
+ * @file layout.scss
+ *   Divides the page into sections. Layouts hold one or more modules together.
+ */
+
 @import "vars";
+@import "mixins";
+
+header {
+  position:relative;
+  margin-bottom:3px;
+}
+.header {
+  position:relative;
+  .header-right {
+    height:50px;
+    @include absolute-y(50px);
+    right:$spacing;
+    left:auto;
+    text-align:right;
+  }
+}
+
+.sidebar {
+  @include padding-top-bottom();
+}
