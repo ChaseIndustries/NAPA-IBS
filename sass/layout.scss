@@ -24,3 +24,8 @@ header {
 .sidebar {
   @include padding-top-bottom();
 }
+
+.inner-wrapper {
+  background:#fff;
+  @include box-shadow(0 0 50px #000);
+}

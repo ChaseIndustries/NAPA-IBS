@@ -18,7 +18,9 @@
 }
 
 .search-modal {
-  top:300px;
+  .modal-content {
+    margin-top:300px;
+  }
   input {
     border:none;
     background:#fff;
@@ -157,6 +159,7 @@
 
 .sidebar, .main-content {
   @include padding-top-bottom();
+  height:100vh;
 }
 
 //
@@ -172,8 +175,8 @@
 .panel {
   .panel-heading {
     background:rgba(0,0,0,.2);
-    color:$near-white;
-    @include border-radius(none);
+    color:$near-black;
+    @include border-radius(0);
     border-color:rgba(255,255,255,.8);
   }
 }

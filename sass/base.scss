@@ -31,7 +31,7 @@ body {
   font-weight: 300;
 	font-family:$sans-serif;
   background:url(../images/brushed.jpg) repeat;
-  color:$near-white;
+  color:$near-black;
 }
 
 header {
@@ -61,12 +61,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 h1 {
   font-size: 3.2em;
-  color:$near-white;
   font-weight:100;
 }
 h2 {
   font-size: 2.8em;
-  color:$near-white;
   font-weight:100;
 }
 h3 {
@@ -87,10 +85,10 @@ h6 {
 }
 
 a {
-  color: $color-2;
+  color: $color-1;
   text-decoration: none;
   &:hover {
-    color: darken($color-2, 20%);
+    color: darken($color-1, 20%);
     text-decoration: none;
   }
 }

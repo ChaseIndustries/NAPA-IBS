@@ -10,3 +10,6 @@ header { position: relative; margin-bottom: 3px; }
 
 /* line 24, ../sass/layout.scss */
 .sidebar { padding-top: 15px; padding-bottom: 15px; }
+
+/* line 28, ../sass/layout.scss */
+.inner-wrapper { background: #fff; -moz-box-shadow: 0 0 50px #000; -webkit-box-shadow: 0 0 50px #000; box-shadow: 0 0 50px #000; }
