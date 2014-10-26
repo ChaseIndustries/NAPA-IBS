@@ -15,12 +15,14 @@ Galleria.addTheme({
     name: 'classic',
     author: 'Galleria',
     css: 'galleria.ibs.css',
+    imageCrop:true,
+    responsive:true,
     defaults: {
         transition: 'slide',
         thumbCrop:  'height',
 
         // set this to false if you want to show the caption all the time:
-        _toggleInfo: true
+        _toggleInfo: false
     },
     init: function(options) {
 
@@ -45,6 +47,14 @@ Galleria.addTheme({
             this.addIdleState( this.get('image-nav-right'), { right:-50 });
             this.addIdleState( this.get('counter'), { opacity:0 });
         }
+
+        //move the caption to go above the thumbnail container
+        var $caption = this.get("info"), 
+        $thumbs = this.get("thumbnails-container");
+        $caption.remove();
+        $($thumbs).before($caption);
+       
+       // $thumbs.before($caption);
 
         // toggle info
         if ( options._toggleInfo === true ) {

@@ -5,10 +5,11 @@
 
  //functions
  function runGallery(){
+    /**
+     * other galleria configurations located in /js/galleria.ibs.js 
+     */
     Galleria.configure({
-      imageCrop:true,
       height:$(".gallery").width()/1.3,
-      responsive:true,
       autoplay:interval
     })  
     Galleria.run('.gallery');

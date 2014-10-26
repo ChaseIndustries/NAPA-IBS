@@ -23,41 +23,41 @@
 /* line 82, ../sass/component.scss */
 .carousel .carousel-control { -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; line-height: 50px; width: 50px; background: #000; bottom: 15px; top: auto; text-align: center; text-shadow: 0 0 0 none; }
 /* line 91, ../sass/component.scss */
-.carousel .carousel-control .glyphicon { font-size: 1.6rem; margin: 0; width: auto; height: auto; position: relative; display: inline; left: auto; right: auto; top: 3px; }
-/* line 102, ../sass/component.scss */
+.carousel .carousel-control .glyphicon { font-size: 1.6rem; margin: 0; width: auto; height: auto; position: relative; display: inline; left: auto; right: auto; }
+/* line 101, ../sass/component.scss */
 .carousel .carousel-control.left { left: 15px; }
-/* line 105, ../sass/component.scss */
+/* line 104, ../sass/component.scss */
 .carousel .carousel-control.right { left: 80px; }
-/* line 109, ../sass/component.scss */
+/* line 108, ../sass/component.scss */
 .carousel .carousel-caption { width: 50%; right: 15px; bottom: 15px; background: rgba(0, 0, 0, 0.7); left: auto; top: auto; font-family: "Roboto", "Helvetica", sans-serif; padding: 15px; }
-/* line 119, ../sass/component.scss */
+/* line 118, ../sass/component.scss */
 .carousel .carousel-indicators { display: none; }
-/* line 123, ../sass/component.scss */
+/* line 122, ../sass/component.scss */
 .carousel .item img { width: 100%; height: auto; }
 
-/* line 130, ../sass/component.scss */
+/* line 129, ../sass/component.scss */
 .top-button { padding-top: 15px; padding-bottom: 15px; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; background: transparent; text-transform: uppercase; font-weight: 400; letter-spacing: .05rem; text-align: center; padding: 15px 30px; float: left; height: 120px; }
-/* line 142, ../sass/component.scss */
+/* line 141, ../sass/component.scss */
 .top-button a { color: #fff; }
-/* line 145, ../sass/component.scss */
+/* line 144, ../sass/component.scss */
 .top-button img { width: 50px; margin: auto; margin-top: 7.5px; }
-/* line 150, ../sass/component.scss */
+/* line 149, ../sass/component.scss */
 .top-button:hover { background: rgba(0, 0, 0, 0.7); -moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px; border-radius: 5px 5px 0 0; border-bottom: 5px solid #2D6CA2; }
-/* line 154, ../sass/component.scss */
+/* line 153, ../sass/component.scss */
 .top-button:hover a { text-decoration: none; }
 
-/* line 160, ../sass/component.scss */
-.sidebar, .main-content { padding-top: 15px; padding-bottom: 15px; height: 100vh; }
+/* line 159, ../sass/component.scss */
+.sidebar, .main-content { padding-top: 15px; padding-bottom: 15px; }
 
-/* line 168, ../sass/component.scss */
+/* line 166, ../sass/component.scss */
 .panel, .panel-body { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: none; background: transparent; }
 
-/* line 176, ../sass/component.scss */
+/* line 174, ../sass/component.scss */
 .panel .panel-heading { background: rgba(0, 0, 0, 0.2); color: #191919; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border-color: rgba(255, 255, 255, 0.8); }
 
-/* line 185, ../sass/component.scss */
+/* line 183, ../sass/component.scss */
 .panel-gallery .panel-body { padding: 0; }
-/* line 188, ../sass/component.scss */
+/* line 186, ../sass/component.scss */
 .panel-gallery .gallery { width: 100%; overflow: hidden; }
-/* line 192, ../sass/component.scss */
+/* line 190, ../sass/component.scss */
 .panel-gallery .gallery > img { display: none; }

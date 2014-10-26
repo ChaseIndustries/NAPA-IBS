@@ -97,7 +97,6 @@
       display:inline;
       left:auto;
       right:auto;
-      top:3px;
     }
     &.left {
       left:$spacing;
@@ -159,7 +158,6 @@
 
 .sidebar, .main-content {
   @include padding-top-bottom();
-  height:100vh;
 }
 
 //
