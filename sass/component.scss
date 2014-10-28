@@ -80,14 +80,14 @@
 
 .carousel {
   .carousel-control {
-    @include border-radius($control-size);
     line-height:$control-size;
     width:$control-size;
-    background:#000;
+    background:none;
     bottom:$spacing;
     top:auto;
     text-align: center;
     @include text-shadow(0 0 0 none);
+    z-index:100;
     .glyphicon {
       font-size:1.6rem;
       margin:0;
@@ -114,6 +114,7 @@
     top:auto;
     font-family:$sans-serif;
     padding:$spacing;
+    text-align:left;
   }
   .carousel-indicators {
     display:none;
@@ -156,6 +157,42 @@
   }
 }
 
+
+//megamenu styles
+.mm {
+  height:0;
+  background:$color-1;
+  @include transition(.3s all ease);
+  z-index:100;
+  position:absolute;
+  top:$header-height;
+  background:$near-white;
+  left:0;
+  width:100%;
+  padding:$spacing;
+  @include opacity(0);
+  filter:none;
+  &.open {
+    @include transition(.3s opacity ease);
+    height:300px;
+  }
+  &.active {
+    @include opacity(1);
+  }
+  &.mm-1 {
+    // needs latest Compass, add '@import "compass"' to your scss
+    background-color: $color-1; // Old browsers
+    @include filter-gradient(darken($color-1,20%), $color-1, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  darken($color-1,20%) 0%,$color-1 10px));
+  }
+  &.mm-2 {
+    background-color:$color-2;
+  }
+  &.mm-3 {
+    background-color:red;
+  }
+}
+
 .sidebar, .main-content {
   @include padding-top-bottom();
 }
@@ -188,9 +225,9 @@
     overflow:hidden;
     
     > img {
-      display:none; // display none so the images aren't shown before
-                    // the whole page is loaded.  Overridden when galleria adds
-                    // an inner wrapper.
+      display:none; // display none so the images aren't shown before the whole
+                    // page is loaded.  Overridden when galleria adds an
+                    // inner wrapper.
     }
   }
 }

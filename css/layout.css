@@ -1,15 +1,15 @@
 /** @file layout.scss Divides the page into sections. Layouts hold one or more modules together. */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
 /* line 9, ../sass/layout.scss */
-header { position: relative; margin-bottom: 3px; }
+header { position: relative; margin-bottom: 3px; z-index: 200; }
 
-/* line 13, ../sass/layout.scss */
+/* line 14, ../sass/layout.scss */
 .header { position: relative; }
-/* line 15, ../sass/layout.scss */
+/* line 16, ../sass/layout.scss */
 .header .header-right { height: 50px; position: absolute; top: 50%; margin-top: -25px; right: 15px; left: auto; text-align: right; }
 
-/* line 24, ../sass/layout.scss */
+/* line 25, ../sass/layout.scss */
 .sidebar { padding-top: 15px; padding-bottom: 15px; }
 
-/* line 28, ../sass/layout.scss */
-.inner-wrapper { background: #fff; -moz-box-shadow: 0 0 50px #000; -webkit-box-shadow: 0 0 50px #000; box-shadow: 0 0 50px #000; }
+/* line 29, ../sass/layout.scss */
+.wrapper--inner { background: #fff; -moz-box-shadow: 0 0 50px #000; -webkit-box-shadow: 0 0 50px #000; box-shadow: 0 0 50px #000; }

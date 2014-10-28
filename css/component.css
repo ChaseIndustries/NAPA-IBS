@@ -21,7 +21,7 @@
 .btn-login::after, .btn-login:hover::after, .btn-login:active::after { width: 1px; position: absolute; position: absolute; top: 50%; margin-top: -12.5px; right: -23px; background: #FFC423; height: 25px; content: ""; }
 
 /* line 82, ../sass/component.scss */
-.carousel .carousel-control { -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; line-height: 50px; width: 50px; background: #000; bottom: 15px; top: auto; text-align: center; text-shadow: 0 0 0 none; }
+.carousel .carousel-control { line-height: 50px; width: 50px; background: none; bottom: 15px; top: auto; text-align: center; text-shadow: 0 0 0 none; z-index: 100; }
 /* line 91, ../sass/component.scss */
 .carousel .carousel-control .glyphicon { font-size: 1.6rem; margin: 0; width: auto; height: auto; position: relative; display: inline; left: auto; right: auto; }
 /* line 101, ../sass/component.scss */
@@ -29,35 +29,48 @@
 /* line 104, ../sass/component.scss */
 .carousel .carousel-control.right { left: 80px; }
 /* line 108, ../sass/component.scss */
-.carousel .carousel-caption { width: 50%; right: 15px; bottom: 15px; background: rgba(0, 0, 0, 0.7); left: auto; top: auto; font-family: "Roboto", "Helvetica", sans-serif; padding: 15px; }
-/* line 118, ../sass/component.scss */
+.carousel .carousel-caption { width: 50%; right: 15px; bottom: 15px; background: rgba(0, 0, 0, 0.7); left: auto; top: auto; font-family: "Roboto", "Helvetica", sans-serif; padding: 15px; text-align: left; }
+/* line 119, ../sass/component.scss */
 .carousel .carousel-indicators { display: none; }
-/* line 122, ../sass/component.scss */
+/* line 123, ../sass/component.scss */
 .carousel .item img { width: 100%; height: auto; }
 
-/* line 129, ../sass/component.scss */
+/* line 130, ../sass/component.scss */
 .top-button { padding-top: 15px; padding-bottom: 15px; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; background: transparent; text-transform: uppercase; font-weight: 400; letter-spacing: .05rem; text-align: center; padding: 15px 30px; float: left; height: 120px; }
-/* line 141, ../sass/component.scss */
+/* line 142, ../sass/component.scss */
 .top-button a { color: #fff; }
-/* line 144, ../sass/component.scss */
+/* line 145, ../sass/component.scss */
 .top-button img { width: 50px; margin: auto; margin-top: 7.5px; }
-/* line 149, ../sass/component.scss */
+/* line 150, ../sass/component.scss */
 .top-button:hover { background: rgba(0, 0, 0, 0.7); -moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px; border-radius: 5px 5px 0 0; border-bottom: 5px solid #2D6CA2; }
-/* line 153, ../sass/component.scss */
+/* line 154, ../sass/component.scss */
 .top-button:hover a { text-decoration: none; }
 
-/* line 159, ../sass/component.scss */
+/* line 162, ../sass/component.scss */
+.mm { height: 0; background: #2D6CA2; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; z-index: 100; position: absolute; top: 120px; background: #f0f0f0; left: 0; width: 100%; padding: 15px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; filter: none; }
+/* line 175, ../sass/component.scss */
+.mm.open { -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; -webkit-transition: opacity 0.3s ease; transition: opacity 0.3s ease; height: 300px; }
+/* line 179, ../sass/component.scss */
+.mm.active { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+/* line 182, ../sass/component.scss */
+.mm.mm-1 { background-color: #2D6CA2; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF173752', endColorstr='#FF2D6CA2'); background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3Mzc1MiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkNmNhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 10, color-stop(0%, #173752), color-stop(100%, #2d6ca2)); background-image: -moz-linear-gradient(top, #173752 0%, #2d6ca2 10px); background-image: -webkit-linear-gradient(top, #173752 0%, #2d6ca2 10px); background-image: linear-gradient(to bottom, #173752 0%, #2d6ca2 10px); }
+/* line 188, ../sass/component.scss */
+.mm.mm-2 { background-color: #FFC423; }
+/* line 191, ../sass/component.scss */
+.mm.mm-3 { background-color: red; }
+
+/* line 196, ../sass/component.scss */
 .sidebar, .main-content { padding-top: 15px; padding-bottom: 15px; }
 
-/* line 166, ../sass/component.scss */
+/* line 203, ../sass/component.scss */
 .panel, .panel-body { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: none; background: transparent; }
 
-/* line 174, ../sass/component.scss */
+/* line 211, ../sass/component.scss */
 .panel .panel-heading { background: rgba(0, 0, 0, 0.2); color: #191919; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border-color: rgba(255, 255, 255, 0.8); }
 
-/* line 183, ../sass/component.scss */
+/* line 220, ../sass/component.scss */
 .panel-gallery .panel-body { padding: 0; }
-/* line 186, ../sass/component.scss */
+/* line 223, ../sass/component.scss */
 .panel-gallery .gallery { width: 100%; overflow: hidden; }
-/* line 190, ../sass/component.scss */
+/* line 227, ../sass/component.scss */
 .panel-gallery .gallery > img { display: none; }
