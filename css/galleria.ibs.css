@@ -51,6 +51,7 @@
     color: #fff;
     font: normal 11px/1 arial,sans-serif;
     z-index: 1;
+    display:none;
 }
 .galleria-theme-ibs .galleria-loader {
     background: #000;

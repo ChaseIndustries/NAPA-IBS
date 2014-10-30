@@ -96,7 +96,7 @@
           $(".top-button.active").removeClass("active");
           me.addClass("active"); 
           megaMenus.open(el);
-      },.1);
+      },100);
       
   }, function(){
     timers.mm = setTimeout(function(){
