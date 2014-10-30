@@ -8,3 +8,5 @@
 * and UI teams.
 */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
+/* line 14, ../sass/theme.scss */
+.small { font-size: 1.2rem; }

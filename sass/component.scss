@@ -17,7 +17,40 @@
   margin-top:.5 * $spacing;
 }
 
-.search-modal {
+//modals
+
+.modal {
+  .modal-body {
+    overflow: hidden;
+  }
+  .modal-close {
+    position:absolute;
+    top:$spacing;
+    right:$spacing;
+    z-index:500;
+    font-size:2rem;
+    line-height:0;
+    height:auto;
+  }
+  .col__left {
+  
+    &::after {
+      position:absolute;
+      width:1px;
+      right:0;
+      top:0;
+      height:75%;
+      min-height:200px;
+      background:$gray-light;
+      content:"";
+    }
+  }
+  form {
+    max-width:200px;
+    margin:auto;
+  }
+}
+.modal__search {
   .modal-content {
     margin-top:300px;
   }
@@ -26,13 +59,19 @@
     background:#fff;
     width:100%;
     padding-right:30px;
-    color:$grey-light;
+    color:$gray-light;
     line-height:3.5rem;
     height:3.5rem;
     font-size:3rem;
     &:focus {
       color:$near-black;
     }
+  }
+}
+
+.modal__login {
+  .modal-dialog {
+    width:800px;    
   }
 }
 
@@ -78,12 +117,12 @@
 }
 
 
-.carousel {
+.carousel__lg {
   .carousel-control {
     line-height:$control-size;
     width:$control-size;
     background:none;
-    bottom:$spacing;
+    bottom:$spacing * 2;
     top:auto;
     text-align: center;
     @include text-shadow(0 0 0 none);
@@ -102,7 +141,22 @@
       left:$spacing;
     }
     &.right {
-      left:$control-size + $spacing + $spacing;
+      left:$control-size + 75 + $spacing; //add 75 to compensate for the carouel-icon
+    }
+  }
+  //position the icon so it goes in between the 2 controls
+  .carousel-icon {
+    position:absolute;
+    left:$control-size + $spacing;
+    width:75px;
+    bottom:$spacing;
+    @include opacity(0); //other rule in state.scss
+    @include transition-delay(3s);
+    @include transition-duration(.5s);
+    @include transition-property(opacity);
+    &:hover {
+      width:85px;
+      left:$control-size + $spacing - 5;
     }
   }
   .carousel-caption {
@@ -147,7 +201,7 @@
     margin:auto;
     margin-top:.5 * $spacing;
   }
-  &:hover {
+  &:hover, &.active {
     background:rgba(0,0,0,.7);
     @include border-radius($radius $radius 0 0);
     border-bottom:5px solid $color-1;
@@ -160,41 +214,82 @@
 
 //megamenu styles
 .mm {
-  height:0;
+  top:-100%;
   background:$color-1;
   @include transition(.3s all ease);
-  z-index:100;
+  z-index:150;
   position:absolute;
-  top:$header-height;
   background:$near-white;
   left:0;
   width:100%;
   padding:$spacing;
   @include opacity(0);
   filter:none;
+  overflow: hidden;
   &.open {
     @include transition(.3s opacity ease);
-    height:300px;
+    min-height:300px;
+    top:$header-height;
   }
   &.active {
     @include opacity(1);
+    z-index:151;
   }
   &.mm-1 {
-    // needs latest Compass, add '@import "compass"' to your scss
-    background-color: $color-1; // Old browsers
-    @include filter-gradient(darken($color-1,20%), $color-1, vertical); // IE6-9
-    @include background-image(linear-gradient(top,  darken($color-1,20%) 0%,$color-1 10px));
+    @include mm-shadow-gradient($color-1);
   }
   &.mm-2 {
-    background-color:$color-2;
+    @include mm-shadow-gradient($color-2);
   }
   &.mm-3 {
-    background-color:red;
+    @include mm-shadow-gradient($color-1);
+  }
+  h3 {
+    margin-top:0;
+  }
+  .mm--callouts {
+    padding-top:$spacing;
   }
 }
 
 .sidebar, .main-content {
   @include padding-top-bottom();
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+img.pull-left {
+  margin-right:$spacing;
+  margin-left:0;
+}
+
+img.pull-right {
+  margin-left:$spacing;
+  margin-right:0;
+}
+
+.icon-col {
+  text-align: center;
+  font-size:1.2rem;
+  @include padding-top-bottom();
+  &, a {
+    color:$near-black;
+  }
+}
+
+//
+// Buttons
+//
+.btn__callout {
+  &,&:hover,&:active,&:focus {
+    color:$near-black;
+    background:$gray-light;
+    width:100%;
+    margin:auto;
+    text-align:center;
+  }
 }
 
 //
@@ -209,10 +304,13 @@
 }
 .panel {
   .panel-heading {
-    background:rgba(0,0,0,.2);
+    background:none;
+    border-bottom-width:1px;
+    border-bottom-style: solid;
     color:$near-black;
     @include border-radius(0);
-    border-color:rgba(255,255,255,.8);
+    border-color:rgba(0,0,0,.3);
+    padding-left:0;
   }
 }
 

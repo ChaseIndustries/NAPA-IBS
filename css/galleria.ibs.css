@@ -28,6 +28,7 @@
     left: 10px;
     right: 10px;
     z-index: 2;
+    padding:5px;
 }
 .galleria-theme-ibs .galleria-carousel .galleria-thumbnails-list {
     margin-left: 30px;
@@ -81,7 +82,7 @@
 .galleria-theme-ibs .galleria-info-description {
     margin: 0;
     color: #3d3d3d;
-    font-size:1.2rem;
+    font-size:1.6rem;
 }
 .galleria-theme-ibs .galleria-info-close {
     width: 9px;

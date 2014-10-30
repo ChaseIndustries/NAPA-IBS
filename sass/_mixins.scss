@@ -58,3 +58,10 @@
 @mixin rounded(){
   @include border-radius($radius);
 }
+
+//gradients
+@mixin mm-shadow-gradient($color){
+    background-color: $color;
+    @include filter-gradient(darken($color,20%), $color, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  darken($color,20%) 0%,$color 10px));
+}

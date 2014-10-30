@@ -1,0 +1,15 @@
+/**
+ * State.scss
+ * Defines how modules might look under certain circumstances
+ */
+ 
+ @import "vars";
+ @import "mixins";
+ 
+  
+ .carousel__lg .item.active .carousel-icon { //shows the icon when item is active
+    @include transition-delay(.5s);
+    @include transition-duration(.5s);
+    @include transition-property(opacity);
+    @include opacity(1);
+ }

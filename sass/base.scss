@@ -59,28 +59,36 @@ header {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.8rem;
   font-weight:100;
 }
+
 h2 {
-  font-size: 2.8em;
+  font-size: 3.6rem;
   font-weight:100;
 }
+
 h3 {
-  font-size:3em;
-  color:#fff;
+  font-size:2.3rem;
+  color:inherit;
 }
+
+
+article h3 {
+  font-size:1.8rem;
+}
+
 h4 {
-  font-size: 2.4em;
-  color:#fff;
+  font-size: 2rem;
+  color:$near-black;
 }
 h5 {
-  font-size: 2em;
-  color:#fff;
+  font-size: 2rem;
+  color:$near-black;
 }
 h6 {
-  font-size: 1.8em;
-  color:#fff;
+  font-size: 1.8rem;
+  color:$near-black;
 }
 
 a {
@@ -90,4 +98,8 @@ a {
     color: darken($color-1, 20%);
     text-decoration: none;
   }
+}
+
+label {
+  font-weight: normal;
 }
