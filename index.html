@@ -31,14 +31,54 @@
         <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <!-- off canvas nav -->
+        <div class="sidebar sidebar__off-canvas">
+          <ul class="nav">
+            <li>
+              <form>
+                <div class="search">
+                    <input type="text" value="Search" onFocus="this.value=='Search'? this.value = '':''" onBlur="!this.value?this.value='Search':''" />
+                    <div class="glyphicon glyphicon-search"></div>
+                    <input type="submit" class="submit hidden" />
+                </div>
+              </form>
+            </li>
+            <li class="mm mm__small closed mm-1">
+              <a href="javascript:;" class="js__mm--toggle mm--toggle">This is a small megamenu item</a>
+              <div class="mm--inner container">
+                <h4>Here you can put any kind of content</h4>
+                <p>
+                Put a paragraph
+                </p>
+                <div class="row">
+                <div class="col-xs-6">
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                </div>
+                </div>
+              </div>
+            </li> 
+            <li>
+              <a href="#">This is a regular nav item</a>
+            </li>
+          </ul>
+        </div><!-- /.sidebar__off-canvas -->
+        
+        <div class="wrapper container-fluid">
         <!-- modals -->
-        <div class="outer-wrapper container-fluid">
           <div class="modal__search modal fade">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-body">
                   <form>
-                    <input type="text" value="Search" onFocus="this.value = ''" onBlur="!this.value?this.value='Search':''" />
+                    <input type="text" value="Search" onFocus="this.value=='Search'? this.value = '':''" onBlur="!this.value?this.value='Search':''" />
                     <input type="submit" class="submit hidden" />
                   </form>
                 </div>              </div><!-- /.modal-content -->
@@ -78,36 +118,41 @@
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
           <!-- /modals -->
+          <!-- page top -->
           <header class="row">
             <div class="container header">
-                <div class="logo col-md-2">
-                  <h1>Integrated Business Solutions</h1>
-                </div>
-                <div class="top-button" data-toggle="mm" data-target=".mm-0">
+                <div class="expand-menu js__expand-menu visible-xs visible-sm pull-left">&#9776;</div>
+                <a href="#">
+                  <div class="logo col-md-2 col-xs-12">
+                    <h1>Integrated Business Solutions</h1>
+                  </div>
+                </a>
+                <div class="top-button hidden-sm hidden-xs" data-toggle="mm" data-target=".mm-0">
                   <a href="#">Why Napa IBS?
                     <img class="img-responsive" alt="This is alt text" src="images/buttons/IBS_icons_IBS.png" />
                   </a>
                 </div>
-                <div class="top-button" data-toggle="mm" data-target=".mm-1">
+                <div class="top-button hidden-sm hidden-xs" data-toggle="mm" data-target=".mm-1">
                   <a href="#">Customer Fleet
                     <img class="img-responsive" alt="This is alt text" src="images/buttons/IBS_icons_IBS.png" />
                   </a>
                 </div>
-                <div class="top-button" data-toggle="mm" data-target=".mm-2">
+                <div class="top-button hidden-sm hidden-xs" data-toggle="mm" data-target=".mm-2">
                   <a href="#">NJPA
                     <img class="img-responsive" alt="This is alt text"  src="images/buttons/IBS_icons_NJPA.png" />
                   </a>
                 </div>
-                <div class="col-md-3 header-right">
+                <div class="header-right hidden-sm hidden-xs">
                   <a class="btn btn-login" href="javascript:;" data-toggle="modal" data-target=".modal__login">IBS Member Login</a>
-                  <a href="javascript:;" class="search"  data-toggle="modal" data-target=".modal__search">
+                  <br>
+                  <a href="javascript:;" class="btn-search"  data-toggle="modal" data-target=".modal__search">
                       <div class="glyphicon glyphicon-search"></div>
                   </a>
                 </div>
               </div>
           </header>
           <!-- mm 1 -->
-          <div class='mm mm-0'>
+          <div class='mm mm__lg mm-0'>
             <div class="mm--inner container">
               <div class="row">
               
@@ -174,15 +219,15 @@
                   <a class="btn btn__callout">Training</a>
                 </div>                
               </div>
-            </div><!-- /.mm- -inner -->
+            </div><!-- /.mm inner -->
           </div><!-- /.mm -->
-          <div class='mm mm-1'>
+          <div class='mm mm__lg mm-1'>
             <div class="mm--inner container">
               <div class="col-md-8"></div>
               <div class="col-md-4"></div>
             </div>
           </div>
-          <div class='mm mm-2'>
+          <div class='mm mm__lg mm-2'>
             <div class="mm--inner container">
               <div class="col-md-8"></div>
               <div class="col-md-4"></div>
@@ -203,7 +248,7 @@
                     <div class="item active">
                       <img src="http://www.lorempixel.com/700/400" alt="This is a caption">
                       <div class="carousel-caption">
-                        <div class="col-xs-12"><h3>This is a headline within the caption<h3></div>
+                        <div class="col-xs-12"><h3>This is a headline within the caption</h3></div>
                         <div class="col-xs-4">HTML within the caption</div><div class="col-xs-8">Another column</div>
                       </div>
                       <a href="#" class="carousel-icon"><img src="images/buttons/IBS_icons_Cities.png" /></a>
@@ -245,7 +290,7 @@
                   </div>
                   <div class="panel-body">
                     <div class="gallery galleria-theme-ibs">
-                      <img src="http://www.lorempixel.com/400/300" alt="This is a caption" longdesc="http://www.google.com"></a>
+                      <img src="http://www.lorempixel.com/400/300" alt="This is a caption" longdesc="http://www.google.com">
                       <img src="http://www.lorempixel.com/400/300" alt="This is a caption">
                       <img src="http://www.lorempixel.com/400/300" alt="This is a caption">
                     </div>
@@ -281,11 +326,11 @@
                 <div class="clearfix"></div>
               </aside><!-- /.col-md-4.sidebar -->
             </div><!-- /.row -->
-          </div><!-- ./inner-wrapper -->
+          </div><!-- ./wrapper inner -->
           <footer class="container">
           
           </footer>
-        </div>
+        </div><!-- /.wrapper -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>

@@ -11,6 +11,16 @@
 @import "vars";
 @import "mixins";
 
- .small {
+.small {
    font-size:1.2rem;
- }
+}
+ 
+img.pull-left {
+  margin-right:$spacing;
+  margin-left:0;
+}
+
+img.pull-right {
+  margin-left:$spacing;
+  margin-right:0;
+}

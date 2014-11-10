@@ -10,23 +10,49 @@ header {
   position:relative;
   margin-bottom:3px;
   z-index:200;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+  @media(max-width:$break-sm){
+    background:#000;
+  }
+  &::after {
+    content:"";
+    position:absolute;
+    height:3px;
+    width:100%;
+    // needs latest Compass, add '@import "compass"' to your scss
+    background-color: $color-1; // Old browsers
+    @include filter-gradient($color-2, $color-1, horizontal); // IE6-9
+    @include background-image(linear-gradient(left,  $color-1 1%,$color-2 50%,$color-1 100%));
+  }
 }
 .header {
   position:relative;
   .header-right {
     height:50px;
-    @include absolute-y(50px);
+    padding-top:$spacing * 2;
     right:$spacing;
     left:auto;
     text-align:right;
+    a {
+      display:inline-block;
+    }
   }
 }
 
-.sidebar {
-  @include padding-top-bottom();
+.wrapper {
+  position:relative;
 }
 
 .wrapper--inner {
   background:#fff;
   @include box-shadow(0 0 50px #000);
+  margin-top:-$header-height;
+  padding-top:$header-height + $spacing;
 }
+

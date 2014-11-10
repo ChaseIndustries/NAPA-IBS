@@ -2,3 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
 /* line 10, ../sass/state.scss */
 .carousel__lg .item.active .carousel-icon { -moz-transition-delay: 0.5s; -o-transition-delay: 0.5s; -webkit-transition-delay: 0.5s; transition-delay: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-property: opacity; -o-transition-property: opacity; -webkit-transition-property: opacity; transition-property: opacity; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+
+/* line 18, ../sass/state.scss */
+body.open .wrapper { left: 80%; }
+/* line 21, ../sass/state.scss */
+body.open .sidebar__off-canvas { left: 0; }

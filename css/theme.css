@@ -10,3 +10,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
 /* line 14, ../sass/theme.scss */
 .small { font-size: 1.2rem; }
+
+/* line 18, ../sass/theme.scss */
+img.pull-left { margin-right: 15px; margin-left: 0; }
+
+/* line 23, ../sass/theme.scss */
+img.pull-right { margin-left: 15px; margin-right: 0; }

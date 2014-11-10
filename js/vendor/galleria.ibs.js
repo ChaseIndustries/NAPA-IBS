@@ -14,7 +14,6 @@
 Galleria.addTheme({
     name: 'classic',
     author: 'Galleria',
-    css: 'galleria.ibs.css',
     imageCrop:true,
     responsive:true,
     defaults: {

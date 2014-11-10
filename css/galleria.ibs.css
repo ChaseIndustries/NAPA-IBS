@@ -21,6 +21,12 @@
    padding:10px;
     overflow:hidden;
 }
+
+/* horizontally center thumnbails */
+.galleria-theme-ibs .galleria-thumbnails {
+  margin:auto;
+}
+
 .galleria-theme-ibs .galleria-thumbnails-container {
     height: 50px;
     bottom: 0;
