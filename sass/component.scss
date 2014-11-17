@@ -278,11 +278,15 @@
           &::before { 
           width:10px;
           height:15px;
-          background-image:url("../images/arrow_right_yellow_filled.svg");
+          background-image:url("../images/arrow_right_yellow_filled.svg") !important;
           background-size:100% 100%;
           content:"";
-          margin-right:5px;
+          margin-right:5px !important;
           display:inline-block;
+          margin-left:0;
+          }
+          &::after {
+            background:none !important;
           }
         }
       }
@@ -324,7 +328,7 @@
           display:inline-block;
         }
         &::before {
-          background:none;
+          background-image:none;
         }
       }
       &.active {
@@ -332,10 +336,10 @@
           &::before { 
             width:15px;
             height:10px;
-            background-image:url("../images/arrow_down_yellow.svg");
+            background-image:url("../images/arrow_down_yellow.svg") !important;
             background-size:100% 100%;
             content:"";
-            margin-right:5px;
+            margin-right:5px !important;
             display:inline-block;
           }
         }
