@@ -39,11 +39,13 @@
     /**
      * other galleria configurations located in /js/galleria.ibs.js, styles in /css/galleria.ibs.css
      */
-    Galleria.configure({
-      height:$(".gallery").width()/1.3,
-      autoplay:interval
-    })  
-    Galleria.run('.gallery');
+    if($(".gallery").length){
+      Galleria.configure({
+        height:$(".gallery").width()/1.3,
+        autoplay:interval
+      })  
+      Galleria.run('.gallery');
+    }
   }
   
   //page load
@@ -71,17 +73,6 @@
       });
   });
   
-/*
-  $("carousel__lg").on("slid.bs.carousel",function(e){
-    item = e.dataTarget;
-    item.find(".carousel-icon").addClass("active");
-  });
-  
-  $("carousel__lg").on("slide.bs.carousel",function(e){
-    item = e.dataTarget;
-    item.find(".carousel-icon").removeClass("active");
-  });
-*/
   $(".wrapper").click(function(){
     if($(".js__expand-menu").hasClass("active")){
       $("body").removeClass("open");
@@ -142,6 +133,9 @@
       timers.mm = setTimeout(function(){
         megaMenus.close();
       },1000);
+  })
+  $(".dropdown-toggle").click(function(){
+    $(this).closest("li.dropdown").toggleClass("active");
   })
   
 })(jQuery);

@@ -253,6 +253,98 @@
 .sidebar {
   height:100%;
   @include padding-top-bottom();
+  .nav {
+    list-style: none;
+    margin:0;
+    li {
+      	a {
+        padding:10px;
+        &::before { 
+          width:10px;
+          height:15px;
+          background-image:url("../images/arrow_right_yellow.svg");
+          background-size:100% 100%;
+          content:"";
+          margin-right:5px;
+          display:inline-block;
+        }
+        &:hover, &:focus {
+          background:inherit;
+        }
+      }
+
+      &.active {
+        > a {
+          &::before { 
+          width:10px;
+          height:15px;
+          background-image:url("../images/arrow_right_yellow_filled.svg");
+          background-size:100% 100%;
+          content:"";
+          margin-right:5px;
+          display:inline-block;
+          }
+        }
+      }
+      &.title {
+        text-transform: uppercase;
+        font-size:2.1rem;
+        letter-spacing: 0.05rem;
+        color:$near-black;
+        padding:10px;
+        a {
+          padding:10px;
+          margin:-10px;
+          &::before {
+            background:none;
+            width:0;
+            height:0;
+            margin:0;
+          }
+        }
+      }
+    }
+    li.dropdown {
+      ul {
+        display:none;
+        margin-left:$spacing * 2;
+      }
+      a {
+        display:block;
+      }
+      > ul > li > a {
+        &::after { 
+          width:10px;
+          height:15px;
+          float:right;
+          background-image:url("../images/arrow_right_green.svg");
+          background-size:100% 100%;
+          content:"";
+          margin-left:5px;
+          display:inline-block;
+        }
+        &::before {
+          background:none;
+        }
+      }
+      &.active {
+        > .dropdown-toggle {
+          &::before { 
+            width:15px;
+            height:10px;
+            background-image:url("../images/arrow_down_yellow.svg");
+            background-size:100% 100%;
+            content:"";
+            margin-right:5px;
+            display:inline-block;
+          }
+        }
+        > ul {
+          display:block !important;
+        }
+      }
+    }
+  }
 }
 
 .sidebar__off-canvas {

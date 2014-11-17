@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NAPA IBS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/vendor/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/galleria.ibs.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/component.css">
+        <link rel="stylesheet" href="css/state.css">
+        <link rel="stylesheet" href="css/theme.css">
+        <!--[if IE]>
+           <link href="css/ie.css" rel="stylesheet" />
+        <![endif]-->
+        <!--
+        hotfix.css is CSS only (not built with a compiler) for back-end devs 
+        to make quick hotfixes to existing styles (or to add new ones)
+        -->
+        <link rel="stylesheet" href="css/hotfix.css">
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- off canvas nav -->
+        <div class="sidebar sidebar__off-canvas">
+          <ul class="nav">
+            <li>
+              <form>
+                <div class="search">
+                    <input type="text" value="Search" onFocus="this.value=='Search'? this.value = '':''" onBlur="!this.value?this.value='Search':''" />
+                    <div class="glyphicon glyphicon-search"></div>
+                    <input type="submit" class="submit hidden" />
+                </div>
+              </form>
+            </li>
+            <li class="mm mm__small closed mm-1">
+              <a href="javascript:;" class="js__mm--toggle mm--toggle">This is a small megamenu item</a>
+              <div class="mm--inner container">
+                <h4>Here you can put any kind of content</h4>
+                <p>
+                Put a paragraph
+                </p>
+                <div class="row">
+                <div class="col-xs-6">
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                  <a href="#">Columns with links</a>
+                </div>
+                </div>
+              </div>
+            </li> 
+            <li>
+              <a href="#">This is a regular nav item</a>
+            </li>
+          </ul>
+        </div><!-- /.sidebar__off-canvas -->
+        
+        <div class="wrapper container-fluid">
+        <!-- modals -->
+          <div class="modal__search modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="search">
+                  <form>
+                    <input type="text" value="Search" onFocus="this.value=='Search'? this.value = '':''" onBlur="!this.value?this.value='Search':''" />
+                    <input type="submit" class="submit hidden" />
+                  </form>
+                  </div>
+                </div>              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <div class="modal__login modal fade">
+            <div class="modal-dialog">
+              <a class="modal-close" href="javascript:;" data-dismiss="modal">&times;<span class="sr-only">Close</span></a>
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="col-md-6 col__left">
+                    <form>
+                      <h4>Login</h4>
+                      <div class="form-group">
+                          <label>Username</label>
+                          <input type="text" class="form-control">                        
+                          <label>Password</label>
+                          <input type="password"  class="form-control">
+                      </div>
+                          <input type="submit" class="btn btn-default" value="Login" />
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <form>  
+                      <h4>Register</h4>
+                      <div class="form-group">    
+                          <label>Username</label>
+                          <input type="text" class="form-control">                        
+                          <label>Password</label>
+                          <input type="password"  class="form-control">
+                      </div>
+                        <input type="submit" class="btn btn-default" value="Register" />
+                      </form>
+                  </div>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <!-- /modals -->
+          <!-- page top -->
+          <header class="row">
+            <div class="container header">
+                <div class="expand-menu js__expand-menu visible-xs visible-sm pull-left">&#9776;</div>
+                <a href="#">
+                  <div class="logo col-md-2 col-xs-12">
+                    <h1>Integrated Business Solutions</h1>
+                  </div>
+                </a>
+                <div class="top-button hidden-sm hidden-xs" data-toggle="mm" data-target=".mm-0">
+                  <a href="#">Why Napa IBS?
+                    <img class="img-responsive" alt="This is alt text" src="images/buttons/IBS_icons_IBS.png" />
+                  </a>
+                </div>
+                <div class="top-button hidden-sm hidden-xs" data-toggle="mm" data-target=".mm-1">
+                  <a href="#">Customer Fleet
+                    <img class="img-responsive" alt="This is alt text" src="images/buttons/IBS_icons_IBS.png" />
+                  </a>
+                </div>
+                <div class="top-button hidden-sm hidden-xs" data-toggle="mm" data-target=".mm-2">
+                  <a href="#">NJPA
+                    <img class="img-responsive" alt="This is alt text"  src="images/buttons/IBS_icons_NJPA.png" />
+                  </a>
+                </div>
+                <div class="header-right hidden-sm hidden-xs">
+                  <a class="btn btn-login" href="javascript:;" data-toggle="modal" data-target=".modal__login">IBS Member Login</a>
+                  <br>
+                  <a href="javascript:;" class="btn-search"  data-toggle="modal" data-target=".modal__search">
+                      <div class="glyphicon glyphicon-search"></div>
+                  </a>
+                </div>
+              </div>
+          </header>
+          <!-- mm 1 -->
+          <div class='mm mm__lg mm-0'>
+            <div class="mm--inner container">
+              <div class="row">
+              
+                <div class="col-md-8">
+                  
+                  <h3>Government Fleet</h3>
+                  <p>
+                  <img class="pull-left thumbnail" src="http://lorempixel.com/200/300" />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fringilla eros nulla, eget scelerisque nisi vulputate sed. Donec sed turpis tempor, iaculis risus id, finibus arcu. 
+                  </p>
+                  
+                </div>
+                <div class="col-md-4">        
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div>
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div> 
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div>  
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div>
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div> 
+                      <div class="col-xs-12 icon-col">
+                        <a href="#">
+                          <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                          Lorem ipsum dolor
+                        </a> 
+                      </div>  
+                      <div class="col-xs-12 icon-col">
+                        <img src="images/buttons/IBS_icons_Export.png" alt="IBS_icons_Export" width="50" ><br>
+                        Lorem ipsum dolor
+                      </div>
+                    </div>
+                  </div><!--/.row -->
+                </div><!-- /.col-md-4 -->
+              </div><!-- /.row -->
+              <div class="row mm--callouts">
+                <div class="col-md-4">
+                  <a class="btn btn__callout">Training</a>
+                </div>
+                <div class="col-md-4">
+                  <a class="btn btn__callout">Training</a>
+                </div>
+                <div class="col-md-4">
+                  <a class="btn btn__callout">Training</a>
+                </div>                
+              </div>
+            </div><!-- /.mm inner -->
+          </div><!-- /.mm -->
+          <div class='mm mm__lg mm-1'>
+            <div class="mm--inner container">
+              <div class="col-md-8"></div>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+          <div class='mm mm__lg mm-2'>
+            <div class="mm--inner container">
+              <div class="col-md-8"></div>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+          
+          <div class="wrapper--inner container">
+          <div class="bg bg__left"></div>
+            <div class="row">
+              <aside class="col-md-4 sidebar">
+                <ul class="nav">
+                  <li class="title"><a href="#">This is a title</a></li>
+                  <li class="title">This is a non-linked title</li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">A Dropdown</a>
+                    <ul>
+                      <li class="active"><a href="#">An active link</a></li>
+                      <li><a href="#">A link</a></li>
+                      <li><a href="#">A link</a></li>
+                      <li><a href="#">A link</a></li>
+                      <li><a href="#">A link</a></li>
+                      <li><a href="#">A link</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">A Link</a></li>
+                  <li><a href="#">A Link</a></li>
+                  <li><a href="#">A Link</a></li>
+                  <li><a href="#">A Link</a></li>
+                </ul>
+              </aside><!-- /.col-md-4.sidebar -->
+              <div class="col-md-8 main-content">
+                <div class="carousel__lg carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target=".carousel__lg" data-slide-to="0" class="active"></li>
+                    <li data-target=".carousel__lg" data-slide-to="1"></li>
+                    <li data-target=".carousel__lg" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="http://www.lorempixel.com/700/400" alt="This is a caption">
+                      <div class="carousel-caption">
+                        <div class="col-xs-12"><h3>This is a headline within the caption</h3></div>
+                        <div class="col-xs-4">HTML within the caption</div><div class="col-xs-8">Another column</div>
+                      </div>
+                      <a href="#" class="carousel-icon"><img src="images/buttons/IBS_icons_Cities.png" /></a>
+                    </div>
+                    <div class="item">
+                      <img src="http://www.lorempixel.com/700/400" alt="This is a caption">
+                      <div class="carousel-caption">
+                        This is a caption.  The caption goes here
+                      </div>
+                      <a href="#" class="carousel-icon"><img src="images/buttons/IBS_icons_AutoCare.png" /></a>
+                    </div>
+                    <div class="item">
+                      <img src="http://www.lorempixel.com/700/400" alt="This is a caption">
+                      <div class="carousel-caption">
+                        This is a caption.  The caption goes here
+                      </div>
+                      <a href="#" class="carousel-icon"><img src="images/buttons/IBS_icons_AutoCare.png" /></a>
+                    </div>
+                  </div>
+                
+                  <!-- Controls -->
+                  <a class="left carousel-control" href=".carousel__lg" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href=".carousel__lg" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div><!-- /.carousel -->
+                
+                <h2>Title / Header</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+              </div><!-- /col-md-8 -->
+            </div><!-- /.row -->
+            <div class="bg bg__right"></div>
+          </div><!-- ./wrapper inner -->
+          
+          <footer class="container">
+          
+          </footer>
+        </div><!-- /.wrapper -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/galleria.js"></script>
+        <script src="js/vendor/galleria.ibs.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

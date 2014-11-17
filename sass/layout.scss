@@ -6,6 +6,11 @@
 @import "vars";
 @import "mixins";
 
+html,body {
+  height:100%;
+  overflow-x: hidden;
+}
+
 header {
   position:relative;
   margin-bottom:3px;
@@ -47,6 +52,7 @@ header {
 
 .wrapper {
   position:relative;
+  min-height:100%;
 }
 
 .wrapper--inner {
@@ -54,5 +60,24 @@ header {
   @include box-shadow(0 0 50px #000);
   margin-top:-$header-height;
   padding-top:$header-height + $spacing;
+  position: relative;
+  height:100%;
+}
+
+.bg {
+  height:100%;
+  position:absolute;
+  width:280px;
+  max-height:1700px;
+  top:0;
+  height:100%;
+}
+.bg__left {
+  background:url("../images/gears_left.jpg") no-repeat;
+  left:-280px;
+}
+.bg__right {
+  background:url("../images/gears_right.jpg") no-repeat;
+  right:-280px;
 }
 
