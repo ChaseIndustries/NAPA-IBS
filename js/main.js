@@ -4,6 +4,7 @@
   
   var interval = 5000, 
   timers = {},
+  sidebarWidth = $(".sidebar__off-canvas").width();
   megaMenus = {
     close: function(){
       $(".mm__lg.open").removeClass("open");
@@ -77,14 +78,22 @@
     if($(".js__expand-menu").hasClass("active")){
       $("body").removeClass("open");
       $(".js__expand-menu").removeClass("active");
+      
     }
   });
 
   $(".js__expand-menu").click(function(e){
     e.stopPropagation();
     $(this).toggleClass("active");
-    $("body").toggleClass("open");
-    $(".sidebar__off-canvas").css("min-height",$(document).height());
+    sidebar_width = $(".sidebar__off-canvas").width();
+    if($("body").hasClass("open")){
+     $("body").removeClass("open").find(".wrapper").css({left:"auto"});
+     $(".sidebar__off-canvas").css("min-height",0).removeClass("active");
+    } else {
+     $("body").addClass("open").find(".wrapper").css({left:sidebar_width});
+     $(".sidebar__off-canvas").css("min-height",$(document).height()).addClass("active");
+    }
+    
   });
   
   $(".js__mm--toggle").click(function(){

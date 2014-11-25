@@ -356,6 +356,9 @@
   left:-$sidebar-width;
   position:absolute;
   z-index:0;
+  &.active {
+    z-index:300;
+  }
   width:$sidebar-width;
   background:$near-black;
   top:0;

@@ -15,9 +15,6 @@
 }
 
 body.open {
-  .wrapper {
-    left:$sidebar-width;
-  }
   .sidebar__off-canvas {
     left:0;
   }
