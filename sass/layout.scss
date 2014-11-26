@@ -12,6 +12,7 @@ html,body {
 
 body {
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 header {
@@ -35,8 +36,8 @@ header {
     width:100%;
     // needs latest Compass, add '@import "compass"' to your scss
     background-color: $color-1; // Old browsers
-    @include filter-gradient($color-2, $color-1, horizontal); // IE6-9
-    @include background-image(linear-gradient(left,  $color-1 1%,$color-2 50%,$color-1 100%));
+    @include filter-gradient(darken(#ccc,50%), #ccc, horizontal); // IE6-9
+    @include background-image(linear-gradient(left,  darken(#ccc,50%) 1%,#ccc 50%,darken(#ccc,50%) 100%));
   }
 }
 .header {

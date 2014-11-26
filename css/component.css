@@ -332,29 +332,20 @@
     color: #191919; }
 
 .mm__small {
-  position: relative;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  position: relative; }
   .mm__small .mm--inner {
-    margin-top: -55px !important;
     overflow: hidden;
     position: relative;
     z-index: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     font-size: 80%;
-    padding-top: 40px !important; }
+    max-height: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
   .mm__small .mm--toggle, .mm__small .mm--toggle:focus {
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     display: block;
     background: transparent !important;
     position: relative;
@@ -369,20 +360,20 @@
   .mm__small.closed {
     /* added a closed class bec. background needs to change */
     background: rgba(255, 255, 255, 0) !important; }
-    .mm__small.closed .mm--inner {
-      height: 40px;
-      padding-bottom: 0 !important; }
   .mm__small.open .mm--toggle {
     color: #f0f0f0 !important; }
   .mm__small.open .mm--inner {
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
-    height: auto;
-    padding-bottom: 15px; }
+    max-height: 200px; }
     .mm__small.open .mm--inner *, .mm__small.open .mm--inner a:hover {
       color: #f0f0f0; }
 
 .mm__lg {
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   background: #2D6CA2;
   position: absolute;
   padding-top: 130px;
@@ -401,12 +392,10 @@
     transition: opacity 0.3s ease;
     top: 0;
     min-height: 300px; }
+  .mm__lg .mm--inner {
+    padding: 15px; }
 
 .mm {
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   z-index: 150;
   background: #f0f0f0;
   left: 0;
@@ -447,8 +436,6 @@
     margin-top: 0; }
   .mm .mm--callouts {
     padding-top: 15px; }
-  .mm .mm--inner {
-    padding: 15px; }
   .mm.active {
     z-index: 151; }
     .mm.active .mm--inner {

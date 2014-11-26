@@ -404,21 +404,21 @@
 
 .mm__small {
   position:relative;
-  @include transition(.5s all ease);
   .mm--inner {
-    margin-top:-40px - $spacing !important; // negative line height of mm--toggle - padding height
+   // margin-top:-40px - $spacing !important; // negative line height of mm--toggle - padding height
     overflow:hidden;
     position: relative;
     z-index:0;
-    @include opacity(0);
-    @include transition(.5s all ease);
+    @include transition(.5s all);
     font-size:80%;
-    padding-top:40px !important; //height of mm--toggle
+    //padding-top:40px !important; //height of mm--toggle
+    max-height:0;
+    @include opacity(0);
     
   }
   .mm--toggle {
     &, &:focus {
-      @include transition(.3s all ease);
+      //@include transition(.5s all linear);
       display:block;
       background:transparent !important;
       position: relative;
@@ -439,10 +439,6 @@
   &.closed {
   /* added a closed class bec. background needs to change */
     background:rgba(255,255,255,0) !important;
-    .mm--inner {
-      height:40px;
-      padding-bottom:0 !important;
-    }
   }
   &.open {
    .mm--toggle {
@@ -450,8 +446,7 @@
     }
     .mm--inner {
       @include opacity(1);
-      height:auto;
-      padding-bottom:15px;
+      max-height:200px;
       *, a:hover {
         color:$near-white;
       }
@@ -464,6 +459,7 @@
 //
 
 .mm__lg {
+  @include transition(.3s all ease);
   background:$color-1;
   position:absolute;
   padding-top:$header-height + 10;
@@ -480,6 +476,9 @@
   top:-100%;
   position:absolute;
   @include opacity(0);
+  .mm--inner {
+    padding:$spacing;
+  }
 }
 
 //
@@ -487,7 +486,6 @@
 //
 
 .mm {
-  @include transition(.3s all ease);
   z-index:150;
   background:$near-white;
   left:0;
@@ -508,9 +506,6 @@
   }
   .mm--callouts {
     padding-top:$spacing;
-  }
-  .mm--inner {
-    padding:$spacing;
   }
   &.active {
     z-index:151;
