@@ -1,8 +1,10 @@
 /** @file layout.scss Divides the page into sections. Layouts hold one or more modules together. */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
+* { margin: 0; }
+
 html, body { height: 100%; }
 
-body { overflow-x: hidden; }
+body { overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 
 header { position: relative; margin-bottom: 3px; z-index: 200; background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.7))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 100%); /* IE10+ */ background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.7) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */ }
 @media (max-width: 992px) { header { background: #000; } }
@@ -14,10 +16,15 @@ header::after { content: ""; position: absolute; height: 3px; width: 100%; backg
 
 .wrapper { position: relative; height: 100%; }
 
-.wrapper--inner { background: #fff; -moz-box-shadow: 0 0 50px #000; -webkit-box-shadow: 0 0 50px #000; box-shadow: 0 0 50px #000; margin-top: -120px; padding-top: 135px; position: relative; min-height: 100%; }
+.wrapper--inner { background: #fff; -moz-box-shadow: 0 0 50px #000; -webkit-box-shadow: 0 0 50px #000; box-shadow: 0 0 50px #000; margin-top: -120px; padding-top: 135px; position: relative; min-height: 100%; margin-bottom: -100px; }
+.wrapper--inner::after { content: ""; display: block; }
 
 .bg { height: 100%; position: absolute; width: 280px; max-height: 1700px; top: 0; height: 100%; }
 
 .bg__left { background: url("../images/gears_left.jpg") no-repeat; left: -280px; }
 
 .bg__right { background: url("../images/gears_right.jpg") no-repeat; right: -280px; }
+
+footer, .footer, .wrapper--inner::after { height: 100px; }
+
+footer, .footer { padding-top: 15px; padding-bottom: 15px; position: relative; z-index: 1; }

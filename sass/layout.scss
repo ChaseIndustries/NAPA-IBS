@@ -6,6 +6,10 @@
 @import "vars";
 @import "mixins";
 
+* {
+  margin:0;
+}
+
 html,body {
   height:100%;
 }
@@ -66,6 +70,11 @@ header {
   padding-top:$header-height + $spacing;
   position: relative;
   min-height:100%;
+  margin-bottom:-$footer-height;
+  &::after {
+    content:"";
+    display:block;
+  }
 }
 
 .bg {
@@ -84,3 +93,12 @@ header {
   background:url("../images/gears_right.jpg") no-repeat;
   right:-280px;
 }
+footer,.footer, .wrapper--inner::after {
+  height:$footer-height;
+}
+footer,.footer{
+  @include padding-top-bottom();
+  position: relative;
+  z-index:1;
+}
+
