@@ -8,13 +8,15 @@
 @import "mixins";
 
 .logo {
-  font-size:.8rem;
-  width:204px;
-  height:92px;
-  background:url(../images/ibs-logo.png) no-repeat;
+  font-size:.8rem;  
+  background-image:url(../images/ibs-logo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:140px;
+  height:70px;
   text-indent:-10000px;
   margin-right:$spacing * 2;
-  margin-top:.5 * $spacing;
+  margin-top:34px;
   @media(max-width:$break-sm){
     text-align:center;
     margin-left:auto;
@@ -211,16 +213,22 @@
   padding-top:$spacing;
   padding-bottom:$spacing;
   background:rgba(0,0,0,0);
-  text-transform: uppercase;
   font-weight:400;
   letter-spacing:.05rem;
   text-align:center;
-  padding:25px 2%;
+  padding:0 2.2%;
   float:left;
   height:$header-height;
-  font-size:1.1rem;
+  font-size:1.5rem;
+  font-weight:bold;
+  position: relative;
   a {
     color:#fff;
+    //vertically align
+    position:relative;
+    top:50%;
+    @include translateY(-50%);
+    display:inline-block;
   }
   img {
     width:50px;
@@ -229,18 +237,41 @@
     @include transition(.3s all ease);
   }
   &:hover, &.active {
+    background-color: rgb(0,0,0); // Old browsers
+    @include filter-gradient(#000000, #6a6a6a, vertical); // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(106,106,106,1) 100%));
     img {
       width:56px;
     }
   }
   
   &.active {
-    background:rgba(0,0,0,.7);
     @include border-radius($radius $radius 0 0);
-    border-bottom:5px solid $color-1;
+    &::before {
+      position:absolute;
+      content:url(../images/top-button--arrow.png);
+      bottom:$spacing;
+      left:50%;
+      @include translateX(-50%);
+    }
     a {
       text-decoration: none;
     }
+  }
+  &::after {
+    content:"";
+    width:1px;
+    height:70px;
+    position: absolute;
+    left:0;
+    top:30px;
+    // needs latest Compass, add '@import "compass"' to your scss
+    background-color: rgb(172,172,172); // Old browsers
+    @include filter-gradient(#acacac, #181818, vertical); // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    @include background-image(linear-gradient(top,  rgba(172,172,172,1) 0%,rgba(24,24,24,1) 100%));
   }
 }
 
@@ -404,6 +435,7 @@
 
 .mm__small {
   position:relative;
+  background:$near-black;
   .mm--inner {
    // margin-top:-40px - $spacing !important; // negative line height of mm--toggle - padding height
     overflow:hidden;
@@ -463,6 +495,9 @@
   background:$color-1;
   position:absolute;
   padding-top:$header-height + 10;
+  background:url("../images/mm--bg.jpg") repeat-x;
+  height:446px + $header-height;
+  background-position: 0 $header-height;
   &.active {
     z-index:151;
     @include opacity(1);
@@ -479,6 +514,14 @@
   .mm--inner {
     padding:$spacing;
   }
+  &::before {
+    content:url("../images/logo--large.png");
+    left:50%;
+    @include translate3d(-50%,0,0);
+    top:$header-height + 10;
+    position: absolute;
+    z-index:-1;
+  }
 }
 
 //
@@ -487,12 +530,13 @@
 
 .mm {
   z-index:150;
-  background:$near-white;
   left:0;
   width:100%;
   filter:none;
   overflow: hidden;
-  &.mm-0 {
+  //steel background
+  /*
+&.mm-0 {
     @include mm-shadow-gradient(blue);
   }
   &.mm-1 {
@@ -501,6 +545,7 @@
   &.mm-2 {
     @include mm-shadow-gradient(yellow);
   }
+*/
   h3 {
     margin-top:0;
   }
